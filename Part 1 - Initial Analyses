@@ -1,0 +1,48 @@
+Using salary date provided on Kaggle of the University of Vermont's various colleges and their respecive employee/pay, I reverse engineer answers to
+find out if employees of the College of Arts and Science(CAS), are, indeed being cut down and being paid less.
+
+
+To begin with, I wanted a university-wide brief overview of salary and employee details, hence, the query below:
+
+**SELECT
+	College,
+	COUNT(DISTINCT `NAME`) AS 'Number of Employees',
+	Max(`Base Pay`) as 'Highest Salary', 
+	Min(`Base Pay`) as 'Lowest Salary',
+        Avg(`Base Pay`) as 'Average Salary',
+        Year
+FROM salaries_final
+GROUP BY College, Year
+ORDER BY Year asc**
+
+To narrow it down to only CAS, I rectify the query to have a WHERE clause;
+
+SELECT 
+	College,
+	COUNT(DISTINCT `NAME`) AS 'Number of Employees',
+	Max(`Base Pay`) as 'Highest Salary', 
+	Min(`Base Pay`) as 'Lowest Salary',
+        Avg(`Base Pay`) as 'Average Salary',
+        Year
+FROM salaries_final
+WHERE College = 'CAS'
+GROUP BY College, Year
+ORDER BY Year asc
+
+Answer: We see that the Average Base Salary for CAS in 2009 is $70981.03. In 2020 it has a steady growth to $88622.67. The employee count also grows from 246 to 359.
+Though the growth is steady, we should compare it to other colleges to see if it matches. 
+
+From the  university-wide query, we notice that the College of Medicine(COM) has a substantial number of employees. To narrow it down to just COM,
+we will use a similar query as we did for CAS, except we will change the WHERE clause to 'COM':
+
+SELECT 
+	College,
+	COUNT(DISTINCT `NAME`) AS 'Number of Employees',
+	Max(`Base Pay`) as 'Highest Salary', 
+	Min(`Base Pay`) as 'Lowest Salary',
+        Avg(`Base Pay`) as 'Average Salary',
+        Year
+FROM salaries_final
+WHERE College = 'COM'
+GROUP BY College, Year
+ORDER BY Year asc
