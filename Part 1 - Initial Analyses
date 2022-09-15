@@ -4,7 +4,7 @@ find out if employees of the College of Arts and Science(CAS), are, indeed being
 
 To begin with, I wanted a university-wide brief overview of salary and employee details, hence, the query below:
 
-**SELECT**
+SELECT
 	College,
 	COUNT(DISTINCT `NAME`) AS 'Number of Employees',
 	Max(`Base Pay`) as 'Highest Salary', 
