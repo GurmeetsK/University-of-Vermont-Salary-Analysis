@@ -11,7 +11,7 @@ Each part will have corresponding charts made on Tableau Public.
 
 
 
-|**Parts**|**Description**|**Queries Used**|**Charts**|
+|**Parts**|**Description**|**Queries Used**|
 | :------------- |:-------------| :-----|
 | Part 1      |Initial Salary Analysis. I use queries to understand a brief overview of which colleges have what kind of salary and employee range. |(Queries used: Count, Distinct, Group by, Order by, Where)|
 | Part 2     |   I begin comparing CAS and COM in detail to understand how they interact and relate to each other in terms of salary and employee count.   | (Queries used: Case/When statements) |
