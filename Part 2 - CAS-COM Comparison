@@ -1,0 +1,70 @@
+I wanted to confirm if this suspicion would be right so I made two queries each for CAS and COM
+
+CAS 2009:
+
+SELECT COUNT(*) as 'Number of Employees', 
+	CASE
+		WHEN `Base Pay` > 400000 THEN 'Above 400k'
+		WHEN `Base Pay` > 300000 THEN 'Above 300k'
+		WHEN `Base Pay` > 200000 THEN 'Above 200k'
+		WHEN `Base Pay` >100000 THEN 'Above 100k'
+        WHEN `Base Pay` <=100000  THEN 'Below 100k'
+    END AS 'Salary Comparison'
+    FROM salaries_final
+    WHERE Year = 2009
+    AND College LIKE 'CAS'
+    GROUP BY `Salary Comparison`;
+    
+    
+CAS 2020:
+
+    SELECT COUNT(*) as 'Number of Employees', 
+	CASE
+		WHEN `Base Pay` > 400000 THEN 'Above 400k'
+		WHEN `Base Pay` > 300000 THEN 'Above 300k'
+		WHEN `Base Pay` > 200000 THEN 'Above 200k'
+		WHEN `Base Pay` >100000 THEN 'Above 100k'
+        WHEN `Base Pay` <=100000  THEN 'Below 100k'
+    END AS 'Salary Comparison'
+    FROM salaries_final
+    WHERE Year = 2020
+    AND College LIKE 'CAS'
+    GROUP BY `Salary Comparison`;
+    
+    
+    COM 2009:
+
+    SELECT COUNT(*) as 'Number of Employees', 
+	CASE
+		WHEN `Base Pay` > 400000 THEN 'Above 400k'
+		WHEN `Base Pay` > 300000 THEN 'Above 300k'
+		WHEN `Base Pay` > 200000 THEN 'Above 200k'
+		WHEN `Base Pay` >100000 THEN 'Above 100k'
+        WHEN `Base Pay` <=100000  THEN 'Below 100k'
+    END AS 'Salary Comparison'
+    FROM salaries_final
+    WHERE Year = 2009
+    AND College LIKE 'CAS'
+    GROUP BY `Salary Comparison`;
+    
+    COM 2020
+   
+       SELECT COUNT(*) as 'Number of Employees', 
+	CASE
+		WHEN `Base Pay` > 400000 THEN 'Above 400k'
+		WHEN `Base Pay` > 300000 THEN 'Above 300k'
+		WHEN `Base Pay` > 200000 THEN 'Above 200k'
+		WHEN `Base Pay` >100000 THEN 'Above 100k'
+        WHEN `Base Pay` <=100000  THEN 'Below 100k'
+    END AS 'Salary Comparison'
+    FROM salaries_final
+    WHERE Year = 2020
+    AND College LIKE 'COM'
+    GROUP BY `Salary Comparison`;
+
+
+Putting this in chart form, we are immediately able to notice that the percentage of Employees at CAS drops down from 87% in 2009 to 68% in 2020.
+At COM, the number increases to 85% from 78%. 
+
+After confirming these notions, we want to compare the Ratio of CAS Employees to total University employees vs. that of COM Employees to the University.
+We want to do this to understand how the employee count and salary change over time for both colleges. This will be done in Part 3.
