@@ -1,0 +1,10 @@
+Finally, if we take the Sum of all salaries, we can estimate a budget for each college. I do the simple SQL Query below:
+
+SELECT SUM(DISTINCT `Base Pay`), College, Year
+FROM salaries_final
+GROUP BY College, Year
+
+The corresponding chart comparing the two Colleges is below:
+
+In the chart, you can see that in 2009, money allocated to CAS was higher, but by 2020 COM overtakes it. Furthermore, according to an article, CAS
+already has a shortfall of 27 million for the year 2020.
