@@ -1,8 +1,8 @@
-Using salary date provided on Kaggle of the University of Vermont's various colleges and their respecive employee/pay, I reverse engineer answers to
-find out if employees of the College of Arts and Science(CAS), are, indeed being cut down and being paid less.
+In part 1, I introduce the analysis by doing several basic queries that will help us briefly understand how the University and its colleges are functioning
+in terms of their salaries and employees.
 
 
-To begin with, I wanted a university-wide brief overview of salary and employee details, hence, the query below:
+To begin with, I want a university-wide brief overview of salary and employee details, hence, the query below:
 
 SELECT
 	College,
@@ -29,8 +29,8 @@ WHERE College = 'CAS'
 GROUP BY College, Year
 ORDER BY Year asc
 
-Answer: We see that the Average Base Salary for CAS in 2009 is $70981.03. In 2020 it has a steady growth to $88622.67. The employee count also grows from 246 to 359.
-Though the growth is steady, we should compare it to other colleges to see if it matches. 
+Answer: We see that the Average Base Salary for CAS in 2009 is $70981.03. In 2020 it has a steady growth to $88622.67. The employee count also grows
+from 246 to 359. Though the growth is steady, we should compare it to other colleges to see if it matches. 
 
 From the  university-wide query, we notice that the College of Medicine(COM) has a substantial number of employees. To narrow it down to just COM,
 we will use a similar query as we did for CAS, except we will change the WHERE clause to 'COM':
@@ -47,10 +47,10 @@ WHERE College = 'COM'
 GROUP BY College, Year
 ORDER BY Year asc
 
-Answer: Odd enough, we see two contrastting pecularities. We see that the average salary goes down from 68445.76 in 2009 to 57744.02 in 2020. On the other hand,
-The growth of Employees at COM seems to be much larger than at CAS. With 290 Employees in 2009 to 899 Employees in 2020. This could be down to the Law of Averages.
-As the employees increase, the average salary would decrease. In another query, for Business, we notice that the Average Base Pay for the Business School is consistently above approximately
-120,000 and the Employee count is always below 40.
+Answer: Odd enough, we see two contrastting pecularities. We see that the average salary goes down from 68445.76 in 2009 to 57744.02 in 2020. On the
+other hand, The growth of Employees at COM seems to be much larger than at CAS. With 290 Employees in 2009 to 899 Employees in 2020. This could be down to
+the Law of Averages. As the employees increase, the average salary would decrease. In another query, for Business, we notice that the Average Base Pay
+for the Business School is consistently above approximately 120,000 and the Employee count is always below 40.
 
 Another reason could be that Colleges that are focused on growth students, programs, and employees alike require more administrative employees than others.
 
