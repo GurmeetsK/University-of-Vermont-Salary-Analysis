@@ -1,0 +1,22 @@
+To do this,we use the below query:
+
+(SELECT COUNT(DISTINCT Name)  as cnt, College, Year
+FROM salaries_final
+GROUP BY College, Year)
+
+SELECT College, 
+Year, 
+cnt, 
+(SUM(`cnt`) OVER (PARTITION BY Year)) AS cntpartition,
+(cnt/(SUM(cnt) OVER (PARTITION BY Year))) as 'College Employee Ratio'
+FROM t1
+
+ORDER BY Year desc
+
+Immediately, we are able to notice that in 2020, more than half the employees of the University are from COM. To understand the relationship of change between 
+the counts of the Employees of the two colleges to that of the university, I created the chart on Tableau Public below:
+
+
+
+What the chart shows is that over time, COM employees increased up to 50% of all employees(as has been mentioned) by 2020, but CAS Employees sharply decline 
+From approximately 33% in 2009 to 20% in 2020.
