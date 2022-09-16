@@ -1,13 +1,13 @@
 # University-of-Vermont-Salary-Analysis
 
-    University administration is _complex_. There are hundreds, if not thousands, of employees. There are multiple colleges - and all seperate college
+University administration is _complex_. There are hundreds, if not thousands, of employees. There are multiple colleges - and all seperate college
 have their own administrative and pay systems.
 
-    University of Vermont is one such university. With nearly a dozen colleges, the university employees over 1750 employees. Various colleges(namely)
+University of Vermont is one such university. With nearly a dozen colleges, the university employees over 1750 employees. Various colleges(namely)
 College of Arts and Science(CAS) and College of Medicine(COM) have different levels of success according to various metrics - including employee count,
 student count, and average employee salary.
 
-    In this analysis, I explore the implication given by this article that CAS has been struggling over the years. This analysis will be done in 4 parts.
+In this analysis, I explore the implication given by this article that CAS has been struggling over the years. This analysis will be done in 4 parts.
 Each part will have corresponding charts made on Tableau Public.
 
 
